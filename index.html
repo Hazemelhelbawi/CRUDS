@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Clicker+Script&family=Jost:wght@400;500&family=Oswald&family=Poppins:wght@400;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="182-1822158_debugger-for-electron-next-js-examples-clipart.png" type="image/x-icon">
+
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+      </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,64L40,85.3C80,107,160,149,240,144C320,139,400,85,480,90.7C560,96,640,160,720,176C800,192,880,160,960,128C1040,96,1120,64,1200,74.7C1280,85,1360,139,1400,165.3L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+
+
+<div class="d-flex justify-content-center align-items-center">
+    <div class="titleName ">
+        <h1 class="d-inline-block">CRUDS</h1>
+        <i class="fa-solid fa-pen-fancy fa-flip text-info"></i>
+    </div>
+    </div>
+ 
+    <div class="w-75 mx-auto my-5">
+        <label for="productNameInput">productName :</label>
+            <input type="text" class="form-control mb-3" placeholder="Name" id="productNameInput">
+            <div id="nameAlert" class="alert alert-danger d-none ">you should start with A-Z </div>
+        <label for="productPriceInput">productPrice :</label>
+            <input type="number" class="form-control mb-3" placeholder="Price" id="productPriceInput">
+            <div id="priceAlert" class="alert alert-danger d-none ">you should write more 3 number </div>
+
+        <label for="productCategoryInput">productCategory :</label>
+            <input type="text" class="form-control mb-3" placeholder="Category" id="productCategoryInput">
+            <div id="categoryAlert" class="alert alert-danger d-none ">your category is (mobile , computer , labtop , tv)</div>
+
+        <label for="productDescriptionInput">productDescription :</label>
+            <textarea type="text" class="form-control mb-3" placeholder="Description" id="productDescriptionInput"></textarea>
+        <button id="addBtn" class="btn btn-info " onclick="addProduct();">Add Product</button>
+
+    </div>
+    <div class=" w-75 mx-auto py-3">
+        <input type="text" name="" id="searchInput" oninput="searchProduct()" class="form-control w-100 mx-auto mb-3" placeholder="Search">
+        <table class="text-center table ">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Delete</th>
+                <th>Updata</th>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="js/jquery-3.6.1.min.js" ></script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
+    <script src="js/particles.js" ></script>
+    <script src="js/index.js" ></script>
+</body>
+</html>
