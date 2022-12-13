@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Hazem Elhelbawi" />
+    <meta name="description" content="CRUD APP" />
+
+    <meta name="keywords" content="html,css,js,ajax,crud,cruds,update,search,edite,delete" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Clicker+Script&family=Jost:wght@400;500&family=Oswald&family=Poppins:wght@400;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="182-1822158_debugger-for-electron-next-js-examples-clipart.png" type="image/x-icon">
@@ -26,41 +31,43 @@
         <i class="fa-solid fa-pen-fancy fa-flip text-info"></i>
     </div>
     </div>
- 
-    <div class="w-75 mx-auto my-5">
-        <label for="productNameInput">productName :</label>
-            <input type="text" class="form-control mb-3" placeholder="Name" id="productNameInput">
-            <div id="nameAlert" class="alert alert-danger d-none ">you should start with A-Z </div>
-        <label for="productPriceInput">productPrice :</label>
-            <input type="number" class="form-control mb-3" placeholder="Price" id="productPriceInput">
-            <div id="priceAlert" class="alert alert-danger d-none ">you should write more 3 number </div>
+        <section class="">
+            <div class="w-75 mx-auto my-5 response">
+                <label for="productNameInput">productName :</label>
+                    <input type="text" class="form-control mb-3" placeholder="Name" id="productNameInput">
+                    <div id="nameAlert" class="alert alert-danger d-none ">you should start with A-Z </div>
+                <label for="productPriceInput">productPrice :</label>
+                    <input type="number" class="form-control mb-3" placeholder="Price" id="productPriceInput">
+                    <div id="priceAlert" class="alert alert-danger d-none ">you should write more 3 number </div>
+        
+                <label for="productCategoryInput">productCategory :</label>
+                    <input type="text" class="form-control mb-3" placeholder="Category" id="productCategoryInput">
+                    <div id="categoryAlert" class="alert alert-danger d-none ">your category is (mobile , computer , labtop , tv)</div>
+        
+                <label for="productDescriptionInput">productDescription :</label>
+                    <textarea type="text" class="form-control mb-3" placeholder="Description" id="productDescriptionInput"></textarea>
+                <button id="addBtn" class="btn btn-info " onclick="addProduct();">Add Product</button>
+        
+            </div>
+            <div class=" w-75 mx-auto py-3 tableinfo">
+                <input type="text" name="" id="searchInput" oninput="searchProduct()" class="form-control w-100 mx-auto mb-3" placeholder="Search">
+                <table class="text-center table  ">
+                    <thead>
+                        <!-- <th>Index</th> -->
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+        
+            </div>
+        </section>
 
-        <label for="productCategoryInput">productCategory :</label>
-            <input type="text" class="form-control mb-3" placeholder="Category" id="productCategoryInput">
-            <div id="categoryAlert" class="alert alert-danger d-none ">your category is (mobile , computer , labtop , tv)</div>
-
-        <label for="productDescriptionInput">productDescription :</label>
-            <textarea type="text" class="form-control mb-3" placeholder="Description" id="productDescriptionInput"></textarea>
-        <button id="addBtn" class="btn btn-info " onclick="addProduct();">Add Product</button>
-
-    </div>
-    <div class=" w-75 mx-auto py-3">
-        <input type="text" name="" id="searchInput" oninput="searchProduct()" class="form-control w-100 mx-auto mb-3" placeholder="Search">
-        <table class="text-center table ">
-            <thead>
-                <th>Index</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Delete</th>
-                <th>Updata</th>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
-
-    </div>
 
     <script src="js/jquery-3.6.1.min.js" ></script>
     <script src="js/bootstrap.bundle.min.js" ></script>

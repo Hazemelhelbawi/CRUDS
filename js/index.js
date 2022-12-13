@@ -58,7 +58,6 @@ function displayProduct(){
     var data = '' ;
     for (var i = 0; i < productList.length; i++) {
         data += ` <tr>
-            <td>${i+1}</td>
             <td>${productList[i].name}</td>
             <td>${productList[i].price}</td>
             <td>${productList[i].category}</td>
@@ -87,7 +86,6 @@ function searchProduct() {
         if (productList[i].name.toLowerCase().includes(term.toLowerCase())==true )
          {
             data += ` <tr>
-            <td>${i+1}</td>
             <td>${productList[i].name}</td>
             <td>${productList[i].price}</td>
             <td>${productList[i].category}</td>
